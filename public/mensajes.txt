@@ -1,0 +1,50 @@
+[
+  {
+    "author": "diego@gmail.com",
+    "text": "Todo bien",
+    "objFecha": {
+      "dia": 2,
+      "mes": 6,
+      "anio": 2022,
+      "hs": 15,
+      "min": 46,
+      "seg": 14
+    }
+  },
+  {
+    "author": "pepe@gmail.com",
+    "text": "Buenas",
+    "objFecha": {
+      "dia": 2,
+      "mes": 6,
+      "anio": 2022,
+      "hs": 15,
+      "min": 46,
+      "seg": 51
+    }
+  },
+  {
+    "author": "martin@hotmail.com",
+    "text": "Todo bien",
+    "objFecha": {
+      "dia": 2,
+      "mes": 6,
+      "anio": 2022,
+      "hs": 16,
+      "min": 6,
+      "seg": 37
+    }
+  },
+  {
+    "author": "diego@h",
+    "text": "Buenas",
+    "objFecha": {
+      "dia": 2,
+      "mes": 6,
+      "anio": 2022,
+      "hs": 16,
+      "min": 14,
+      "seg": 25
+    }
+  }
+]

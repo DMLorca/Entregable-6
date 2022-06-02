@@ -1,0 +1,9 @@
+  <div>
+    <br>
+    {{#each mensaje }}
+      <p style="color:blue">{{./author}}<p>
+      <p style="color:red">[{{./objFecha.dia}}/{{./objFecha.mes}}/{{./objFecha.anio}} 
+      {{./objFecha.hs}}:{{./objFecha.min}}:{{./objFecha.seg}}]: <p>
+      <p style="color:green">{{./text}}</p>
+    {{/each}}
+  </div>

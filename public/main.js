@@ -33,51 +33,22 @@ const enviarMensaje = () => {
 
 const renderPlantilla = (producto, mensaje) => {
   
-  const { title, price, thumbnail } = producto;
-  const templateString = `
-  {{#if producto}}
-  <table class="table">
-      <thead class="table-dark">
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Foto</th>
-      </thead>
-      <tbody>
-          {{#each producto }}
-          <tr class="table-primary">
-              <td>{{./title }}</td>
-              <td>{{./price }}</td>
-              <td><img style="width: 50px; height:50px" src={{./thumbnail }} alt=""></td>
-          </tr>
-          {{/each }}
-      </tbody>
-  </table>
-  {{else }}
-  <p>No hay productos</p><br>
-  {{/if }}
-  <hr>
-  <h2>Centro de mensajes</h2>
-  `;
-  const templateStringChat = `  
-  <div>
-    <br>
-    {{#each mensaje }}
-      <p style="color:blue">{{./author}}<p>
-      <p style="color:red">[{{./objFecha.dia}}/{{./objFecha.mes}}/{{./objFecha.anio}} 
-      {{./objFecha.hs}}:{{./objFecha.min}}:{{./objFecha.seg}}]: <p>
-      <p style="color:green">{{./text}}</p>
-    {{/each}}
-  </div>
-  `;
-
-  const template = Handlebars.compile(templateString);
-  const templateChat = Handlebars.compile(templateStringChat);
-
-  const htmlChat = templateChat({ mensaje: mensaje});
+  fetch('/templateTable.hbs')
+  .then((res) => res.text())
+  .then((data) => {
+  const template = Handlebars.compile(data);
   const html = template({producto: producto, title: title, price: price, thumbnail: thumbnail});
+  document.getElementById('id_del_div').innerHTML = html;    
+  })
 
-  document.getElementById('id_del_div').innerHTML = html;
+  fetch('/templateMensajes.hbs')
+  .then((res) => res.text())
+  .then((data) => {
+  const templateChat = Handlebars.compile(data);
+  const htmlChat = templateChat({ mensaje: mensaje});
   document.getElementById('id_del_div_chat').innerHTML = htmlChat;
+  })
+
 }
 
 socket.on('new_event', (productos, mensaje) => renderPlantilla(productos, mensaje));

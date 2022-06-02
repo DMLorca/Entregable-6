@@ -16,5 +16,23 @@
     "price": "33.6",
     "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/clock-stopwatch-timer-time-256.png",
     "id": 3
+  },
+  {
+    "title": "pizarra",
+    "price": "123",
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-256.png",
+    "id": 4
+  },
+  {
+    "title": "Lapiz",
+    "price": "342",
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-256.png",
+    "id": 5
+  },
+  {
+    "title": "Microscopio",
+    "price": "554",
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/microscope-lab-science-school-256.png",
+    "id": 6
   }
 ]

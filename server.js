@@ -39,7 +39,6 @@ socketServer.on('connection', (socket) => {
     });
     socket.on('new_message', (mensaje) => {             
         messages.push(mensaje);
-        console.log(messages);
         fs.promises.writeFile('./public/mensajes.txt', JSON.stringify(messages, null, 2));                           
         socketServer.sockets.emit('new_event', producto, messages); 
       }); 
